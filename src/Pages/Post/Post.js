@@ -10,7 +10,7 @@ export default function Post({ postData, authUser, handleClickLike }) {
           onClick={handleClickLike}
           className='p-1'
         >[{postData.likedBy.length}] 
-        {!postData.likedBy.some(u => u === authUser.id) 
+        {!postData.likedBy.some(u => authUser && u === authUser.id) 
           ? '✊'
           : '👍'
         }

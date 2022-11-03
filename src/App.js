@@ -33,26 +33,46 @@ function App() {
 
           {/* AUTH */}
           <Route path='/login' element={<Login />} />
+          <Route path='/register' element={<Register />} />
 
           {/* User */}
-          <Route path='/users/:id' element={<UserShow />} />
-          <Route path='/users' element={<Users />} />
-          <Route path='/register' element={<Register />} />
-          <Route path='/users/:id/edit' element={<UserEdit />} />
+          <Route
+            path="/users/:id"
+            element={<PrivateRoute component={<UserShow />} />}
+          />
+          <Route
+            path="/users/:id/edit"
+            element={<PrivateRoute component={<UserEdit />} />}
+          />
 
           {/* Post */}
-          <Route path='/posts/:id' element={<PostShow />} />
           <Route path='/posts' element={<Posts />} />
-          <Route path='/posts/new' element={<PostNew />} />
-          <Route path='/users/:id/posts/new' element={<PostNew />} />
-          <Route path='/posts/:id/edit' element={<PostEdit />} />
+          <Route
+            path="/posts/:id"
+            element={<PrivateRoute component={<PostShow />} />}
+          />
+          <Route
+            path="/posts/new"
+            element={<PrivateRoute component={<PostNew />} />}
+          />
+          <Route
+            path="/posts/:id/posts/new"
+            element={<PrivateRoute component={<PostNew />} />}
+          />
+          <Route
+            path="/posts/:id/edit"
+            element={<PrivateRoute component={<PostEdit />} />}
+          />
 
           {/* Comment */}
-          <Route path='/comments/:id' element={<CommentShow />} />
-          <Route path='/comments' element={<Comments />} />
-          <Route path='/comments/new' element={<CommentNew />} />
-          <Route path='/posts/:id/comments/new' element={<CommentNew />} />
-          <Route path='/comments/:id/edit' element={<CommentEdit />} />
+          <Route
+            path="/comments/:id"
+            element={<PrivateRoute component={<CommentShow />} />}
+          />
+          <Route
+            path="/comments/:id/edit"
+            element={<PrivateRoute component={<CommentEdit />} />}
+          />
         </Routes> 
       </div>
        
