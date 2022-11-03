@@ -1,0 +1,89 @@
+.App {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.nav {
+  height: 3em;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.clickable {
+  cursor: pointer;
+  margin: 0 2em 0 0;
+}
+
+input, textarea {	
+  width: 20em;
+	height: 1.5em;
+	margin: 5px
+}
+
+.homeLinks {
+  display: flex;
+  align-items: center;
+}
+
+.homeLink {
+  margin: 5px;
+}
+
+.submit {
+  width: 10em;
+	height: 1.5em;
+	margin: 15px 5px 0px 5px;
+}
+
+.listButton {
+	width: 60px;
+	margin: 5px;
+}
+
+.listItem {
+	display: flex;
+	width: 30em;
+  margin-bottom: 10px;
+}
+
+li {
+	flex: 1;
+	text-align: left;
+}
+
+.container {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.paddedRight {
+  margin-right: 25px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.displayContainer {
+  border: 1px solid rgba(0, 0, 0, 0.15); 
+  border-radius: 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px
+}
